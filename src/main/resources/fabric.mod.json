@@ -2,10 +2,11 @@
   "schemaVersion": 1,
   "id": "victus",
   "version": "${version}",
-  "name": "Victus",
+  "name": "Toastified Victus",
   "description": "Improving lives - one heart at a time",
   "authors": [
-    "glisco"
+    "glisco",
+    "Toastberries"
   ],
   "contributors": [
     "Noaaan",
