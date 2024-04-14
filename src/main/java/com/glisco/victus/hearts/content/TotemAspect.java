@@ -16,7 +16,7 @@ import net.minecraft.sound.SoundEvents;
 
 public class TotemAspect extends HeartAspect {
 
-    public static final Type TYPE = new Type(Victus.id("totem"), 0, 3000, 0xFFD16D, TotemAspect::new);
+    public static final Type TYPE = new Type(Victus.id("totem"), 0, 1200*20, 0xFFD16D, TotemAspect::new);
 
     private boolean hadTotem = false;
 
@@ -47,7 +47,7 @@ public class TotemAspect extends HeartAspect {
 
     @Override
     protected int getRechargeDuration() {
-        return hadTotem ? 200 : getType().standardRechargeDuration();
+        return hadTotem ? 60*20 : getType().standardRechargeDuration();
     }
 
     @Override

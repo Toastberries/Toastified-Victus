@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class CheeseAspect extends HeartAspect {
 
-    public static final Type TYPE = new Type(Victus.id("cheese"), 19, 600, 0xffd800, CheeseAspect::new);
+    public static final Type TYPE = new Type(Victus.id("cheese"), 19, 60*20, 0xffd800, CheeseAspect::new);
 
     public CheeseAspect(PlayerEntity player) {
         super(player, TYPE);

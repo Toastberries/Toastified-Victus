@@ -11,7 +11,7 @@ import net.minecraft.util.math.Box;
 
 public class BlazingAspect extends HeartAspect {
 
-    public static final Type TYPE = new Type(Victus.id("blazing"), 9, 50, 0xFD6A2C, BlazingAspect::new);
+    public static final Type TYPE = new Type(Victus.id("blazing"), 9, 25*20, 0xFD6A2C, BlazingAspect::new);
 
     public BlazingAspect(PlayerEntity player) {
         super(player, TYPE);

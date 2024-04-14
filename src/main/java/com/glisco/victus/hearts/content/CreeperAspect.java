@@ -12,7 +12,7 @@ import net.minecraft.world.explosion.EntityExplosionBehavior;
 
 public class CreeperAspect extends HeartAspect {
 
-    public static final Type TYPE = new Type(Victus.id("creeper"), 6, 200, 0x53BC5E, CreeperAspect::new);
+    public static final Type TYPE = new Type(Victus.id("creeper"), 6, 20*20, 0x53BC5E, CreeperAspect::new);
     private static final RegistryKey<DamageType> SUICIDE_DAMAGE_TYPE = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, Victus.id("suicide"));
 
     public CreeperAspect(PlayerEntity player) {
