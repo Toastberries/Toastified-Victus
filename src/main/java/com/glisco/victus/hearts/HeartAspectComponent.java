@@ -37,15 +37,13 @@ public class HeartAspectComponent implements Component, AutoSyncedComponent {
      * to test whether it will be accepted
      *
      * @param aspect The aspect to add
-     * @return Whether the aspect was added, false if this component is full or if the aspect is already added
      */
-    public boolean addAspect(HeartAspect aspect) {
-        if (!acceptsNew(aspect)) return false;
+    public void addAspect(HeartAspect aspect) {
+        if (!acceptsNew(aspect)) return;
 
         this.aspects.add(aspect);
 
         Victus.ASPECTS.sync(provider);
-        return true;
     }
 
     /**
