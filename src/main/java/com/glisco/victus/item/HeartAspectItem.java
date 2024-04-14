@@ -70,7 +70,7 @@ public class HeartAspectItem extends EdibleItem {
         }
 
         tooltip.add(Text.of(" "));
-        tooltip.add(Text.translatable("text.victus.recharge_duration", aspectType.standardRechargeDuration() / 20f).formatted(Formatting.BLUE));
+        tooltip.add(Text.translatable("text.victus.recharge_duration", aspectType.standardRechargeDuration() / 20).formatted(Formatting.BLUE));
     }
 
     public static HeartAspectItem getItem(HeartAspect.Type type) {
