@@ -28,19 +28,19 @@ public class HeartAspectComponent implements Component, AutoSyncedComponent {
         this.aspects = new ArrayList<>();
     }
 
-    public boolean acceptsNew() {
-        return this.aspects.size() < capacity();
+    public boolean acceptsNew(HeartAspect aspect) {
+        return (this.aspects.size() < capacity()) && (!hasAspect(aspect.getType(), null));
     }
 
     /**
-     * Adds a new aspect to this component, use {@link HeartAspectComponent#acceptsNew()}
+     * Adds a new aspect to this component, use {@link HeartAspectComponent#acceptsNew(HeartAspect)}
      * to test whether it will be accepted
      *
      * @param aspect The aspect to add
-     * @return Whether the aspect was added, false if this component is full
+     * @return Whether the aspect was added, false if this component is full or if the aspect is already added
      */
     public boolean addAspect(HeartAspect aspect) {
-        if (this.aspects.size() >= capacity()) return false;
+        if (!acceptsNew(aspect)) return false;
 
         this.aspects.add(aspect);
 
@@ -129,7 +129,7 @@ public class HeartAspectComponent implements Component, AutoSyncedComponent {
     public boolean hasAspect(HeartAspect.Type type, Predicate<HeartAspect> filter) {
         for (var aspect : this.aspects) {
             if (aspect.getType() != type) continue;
-            if (!filter.test(aspect)) continue;
+            if (filter != null && !filter.test(aspect)) continue;
             return true;
         }
         return false;

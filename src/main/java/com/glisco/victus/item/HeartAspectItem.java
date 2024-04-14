@@ -39,7 +39,7 @@ public class HeartAspectItem extends EdibleItem {
         final var playerStack = user.getStackInHand(hand);
         final var aspectComponent = Victus.ASPECTS.get(user);
 
-        if (!aspectComponent.acceptsNew()) return TypedActionResult.pass(playerStack);
+        if (!aspectComponent.acceptsNew(aspectType.factory().apply(user))) return TypedActionResult.pass(playerStack);
 
         user.setCurrentHand(hand);
         return TypedActionResult.success(playerStack);
