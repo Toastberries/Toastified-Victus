@@ -9,7 +9,7 @@
 }
 ```
 
-A hasty aspect with only {gold}2 seconds{} of cooldown, the {light_purple}Archery Heart Aspect{} is quite useful for
+A hasty aspect with only {gold}20 seconds{} of cooldown, the {light_purple}Archery Heart Aspect{} is quite useful for
 crowd control. When broken, a barrage of arrows will be fired at the three foes closest to you, each one perfectly
 targeted. Upon impact, the arrows' punch property will quickly remove their targets from your immediate vicinity.
 

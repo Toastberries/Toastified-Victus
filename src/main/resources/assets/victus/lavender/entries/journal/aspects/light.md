@@ -17,5 +17,5 @@ situation arise, it will block all fall damage, given that it was in fact enough
 
 <recipe;victus:light_heart_aspect>
 
-Do consider however, that breaking a {gold}Light Aspect{} comes with a hefty cooldown of 60 whole seconds, even if no
+Do consider however, that breaking a {gold}Light Aspect{} activates the cooldown, even if no
 fall damage was blocked.
